@@ -1,10 +1,10 @@
 provider "google" {
-  project = "devops-e2e-workflow"
+  project = "harness-project-450807"
   zone = "europe-west1-b"
 }
 
 resource "google_container_cluster" "gke_cluster" {
-  name     = "my-gke-cluster1"
+  name     = "my-gke-cluster"
   #location = "europe-west1"
 
   remove_default_node_pool = true
@@ -20,7 +20,7 @@ resource "google_container_node_pool" "primary_nodes" {
   node_count = 2
 
   node_config {
-    service_account = "devops-e2e-sa@devops-e2e-workflow.iam.gserviceaccount.com"
+    service_account = "gke-service-account@harness-project-450807.iam.gserviceaccount.com"
     machine_type    = "e2-medium"
     disk_size_gb    = 10
     oauth_scopes = [
