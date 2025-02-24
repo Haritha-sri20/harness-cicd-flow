@@ -41,7 +41,7 @@ spec:
     spec:
       containers:
       - name: python-app
-        image: wc0ZQwufRsSO3uqGWd8Rkw  # Blue version
+        image: harithahari2420/java-ci-harness:wc0ZQwufRsSO3uqGWd8Rkw  # Blue version
         ports:
         - containerPort: 8080
 
@@ -67,6 +67,6 @@ spec:
     spec:
       containers:
       - name: python-app
-        image: harithahari2420/java-ci-harness:latest # Green version
+        image: harithahari2420/java-ci-harness:RPoI86qPToampW-DZU7fLw # Green version
         ports:
         - containerPort: 8080
