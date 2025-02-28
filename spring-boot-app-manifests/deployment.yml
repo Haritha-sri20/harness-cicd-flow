@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: java-app
-        image: harithahari2420/java-ci-harness:RPoI86qPToampW-DZU7fLw
+        image: harithahari2420/java-ci-harness:latest
         ports:
         - containerPort: 8080
 
