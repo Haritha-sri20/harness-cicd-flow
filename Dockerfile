@@ -1,13 +1,13 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
 
-# Set the working directory
+# Set working directory for the app
 WORKDIR /opt/app
 
-# Copy the JAR file from the build stage to the runtime image
-COPY --from=build /app/target/spring-boot-demo-1.0.jar app.jar
+# Copy the JAR file from the build stage
+COPY --from=build /app/target/spring-boot-web.jar app.jar
 
-# Expose the port that the app will run on
+# Expose port 8080 for the app
 EXPOSE 8080
 
-# Specify the entry point to run the application
+# Entry point to run the app
 ENTRYPOINT ["java", "-jar", "app.jar"]
