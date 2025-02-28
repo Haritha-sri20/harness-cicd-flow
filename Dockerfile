@@ -4,7 +4,7 @@ FROM adoptopenjdk/openjdk11:alpine-jre
 WORKDIR /opt/app
 
 # Copy the JAR file from the build stage
-COPY --from=build /app/target/spring-boot-web.jar app.jar
+COPY --from=build target/spring-boot-web.jar app.jar
 
 # Expose port 8080 for the app
 EXPOSE 8080
