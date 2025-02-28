@@ -13,7 +13,7 @@ public class StartApplication {
     @GetMapping("/")
     public String index(final Model model) {
         model.addAttribute("title", "I have successfuly built a sprint boot application using Maven");
-        model.addAttribute("msg", "This application is deployed on gke cluster");
+        model.addAttribute("msg", "This application is deployed on gke cluster using harness");
         return "index";
     }
 
@@ -22,3 +22,5 @@ public class StartApplication {
     }
 
 }
+
+
